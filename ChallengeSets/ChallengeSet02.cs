@@ -58,7 +58,13 @@ namespace ChallengeSets
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            int[] arr = new int[] { 1, 2, 3 };
+            int sum = 0;
+            foreach (var num in numbers)
+            {
+                sum += num;
+            }
+            return sum;
         }
 
         public int SumEvens(int[] numbers)
