@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengeSets
 {
@@ -53,23 +54,40 @@ namespace ChallengeSets
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            throw new NotImplementedException();
+            if (str1.Length < str2.Length)
+            {
+                return str1.Length;
+            }
+            return str2.Length;
         }
 
         public int Sum(int[] numbers)
         {
-            int[] arr = new int[] { 1, 2, 3 };
-            int sum = 0;
-            foreach (var num in numbers)
+
+            if (numbers == null)
             {
-                sum += num;
+                return 0;
             }
-            return sum;
+            return numbers.Sum();
+
         }
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+            return 0;
+            }
+                int[] arr = new int[] {1, 2, 3, 4, 5 };
+                int sumevens = 0;
+                for (int i = 0; i < numbers.Length; i++)
+                {
+                    if (numbers[i] % 2 == 0)
+                    {
+                        sumevens += numbers[i];
+                    }
+                }
+            return sumevens;
         }
 
         public bool IsSumOdd(List<int> numbers)
