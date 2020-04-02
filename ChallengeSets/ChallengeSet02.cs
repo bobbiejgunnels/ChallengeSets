@@ -56,7 +56,24 @@ namespace ChallengeSets
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null || numbers.Count() == 0)
+            {
+                return 0;
+            }
+            double minValue = 100000.00;
+            double maxValue = 0;
+            foreach (double dub in numbers.ToList())
+            {
+                if (dub < minValue)
+                {
+                    minValue = dub;
+                }
+                if (dub > maxValue)
+                {
+                    maxValue = dub;
+                }
+            }
+            return minValue + maxValue;
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
@@ -99,12 +116,24 @@ namespace ChallengeSets
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return false;
+            }
+            return (numbers.Sum() % 2 != 0);
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            int oddsCounter = 0;
+            for (int i = 0; i < number; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    oddsCounter++;
+                }
+            }
+            return oddsCounter;
         }
     }
 }
