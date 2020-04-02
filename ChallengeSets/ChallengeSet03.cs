@@ -34,7 +34,14 @@ namespace ChallengeSets
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            throw new NotImplementedException();
+            
+            if (divisor == 0)
+            {
+                return 0;
+            }
+            Decimal value = Decimal.Divide(dividend, divisor); 
+            return value;
+
         }
 
         public int LastMinusFirst(int[] nums)
