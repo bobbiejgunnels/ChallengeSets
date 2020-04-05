@@ -9,7 +9,7 @@ namespace ChallengeSets
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
-            throw new NotImplementedException();
+           return !vals.All(x => x);
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
@@ -48,9 +48,8 @@ namespace ChallengeSets
         public int LastMinusFirst(int[] nums)
         {
 
-
             return nums[nums.Length - 1] - nums[0];
-            
+           
         }
 
         public int[] GetOddsBelow100()
