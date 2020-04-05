@@ -19,7 +19,11 @@ namespace ChallengeSets
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            throw new NotImplementedException();
+            if (password.Any(char.IsUpper) && password.Any(char.IsDigit) && password.Any(char.IsLower))
+            {
+                return true;
+            }
+            return false;
         }
 
         public char GetFirstLetterOfString(string val)
