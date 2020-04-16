@@ -64,7 +64,7 @@ namespace ChallengeSets
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
-            throw new NotImplementedException();
+            biz.Name = "TrueCoders";
         }
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
@@ -74,7 +74,14 @@ namespace ChallengeSets
 
         public bool IsStringANumber(string input)
         {
-            throw new NotImplementedException();
+            double a = 0;
+
+            var answer = double.TryParse(input, out a);
+            return answer;
+
+
+            //if the string is a number return true;
+            //if the string is not a number return false;
         }
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
