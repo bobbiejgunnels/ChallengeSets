@@ -1,16 +1,49 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 namespace ChallengeSets
 {
     public class ChallengeSet04
     {
         public int AddEvenSubtractOdd(int[] numbers)
         {
-            throw new NotImplementedException();
+            var answer = 0;
+            if (numbers == null)
+            {
+                return 0;
+            }
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {
+                    answer += numbers[i];
+                }
+                if (numbers[i] % 2 != 0)
+                {
+                    answer -= numbers[i];
+                }
+            }
+            return answer;
         }
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
         {
-            throw new NotImplementedException();
+            var a = new List<string>();
+
+            a.Add(str1);
+            a.Add(str2);
+            a.Add(str3);
+            a.Add(str4);
+
+            int answer = str1.Length;
+            for (int i = 0; i < a.Count; i++)
+            {
+                if (answer > a[i].Length)
+                {
+                    answer = a[i].Length;
+                }
+            }
+            return answer;
         }
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
