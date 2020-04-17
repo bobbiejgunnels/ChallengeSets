@@ -64,12 +64,14 @@ namespace ChallengeSets
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
-            biz.Name = "TrueCoders";
+            biz.Name = "TrueCoders"; 
         }
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
         {
-            throw new NotImplementedException();
+            return sideLength1 + sideLength2 > sideLength3
+                && sideLength2 + sideLength3 > sideLength1
+                && sideLength1 + sideLength3 > sideLength2;
         }
 
         public bool IsStringANumber(string input)
