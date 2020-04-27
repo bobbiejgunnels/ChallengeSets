@@ -93,12 +93,19 @@ namespace ChallengeSets
 
         public double AverageEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            
         }
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            int result = 1;
+
+            for (int i = 1; i <= number; i++)
+            {
+                result *= 1;
+            }
+            return result;
+
         }
     }
 }
