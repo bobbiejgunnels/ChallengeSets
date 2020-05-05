@@ -7,7 +7,7 @@ namespace ChallengeSets
     {
         public int GetNextNumberDivisibleByN(int startNumber, int n)
         {
-            throw new NotImplementedException();
+            return ((startNumber / n) + 1) * n;
         }
 
         public void ChangeNamesOfBusinessesWithNoRevenueTo_CLOSED(Business[] businesses)
@@ -44,7 +44,29 @@ namespace ChallengeSets
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            throw new NotImplementedException();
+            if (words == null || words.Length == 0)
+            {
+                return "";
+            }
+
+            string sentence = "";
+
+            foreach (string word in words)
+            {
+                if (word.Trim().Length > 0)
+                {
+                    sentence += word.Trim() + " ";
+                }
+            }
+
+            if (sentence.Length == 0)
+            {
+                return "";
+            }
+
+            sentence = sentence.Substring(0, sentence.Length - 1);
+            sentence += ".";
+            return sentence;
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
