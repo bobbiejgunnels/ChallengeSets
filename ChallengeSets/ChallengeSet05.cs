@@ -23,13 +23,13 @@ namespace ChallengeSets
 
         public bool IsAscendingOrder(int[] numbers)
         {
-            if (numbers == null)
-            {
-                return false;
-            }
 
             for (int i = 1; i < numbers.Length; i++)
             {
+                if (numbers == null)
+                {
+                    return false;
+                }
                 if (numbers[i] < numbers[i - 1])
                 {
                     return false;
@@ -88,14 +88,14 @@ namespace ChallengeSets
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
-            if (elements == null)
-            {
-                return null;
-            }
             List<double> everyFourth = new List<double>();
 
             for (int i = 3; i < elements.Count; i += 4)
             {
+                if (elements == null)
+                {
+                    return null;
+                }
                 everyFourth.Add(elements[i]);
             }
 
