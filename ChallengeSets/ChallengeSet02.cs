@@ -20,7 +20,7 @@ namespace ChallengeSets
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            if (vals.Length % 2 ==0)
+            if (vals.Length % 2 == 0)
             {
                 return true;
             }
@@ -56,24 +56,14 @@ namespace ChallengeSets
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
+
             if (numbers == null || numbers.Count() == 0)
-            {
-                return 0;
-            }
-            double minValue = 100000.00;
-            double maxValue = 0;
-            foreach (double dub in numbers.ToList())
-            {
-                if (dub < minValue)
                 {
-                    minValue = dub;
+                    return 0;
                 }
-                if (dub > maxValue)
-                {
-                    maxValue = dub;
-                }
-            }
-            return minValue + maxValue;
+
+            return numbers.Min() + numbers.Max();
+
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
@@ -102,7 +92,6 @@ namespace ChallengeSets
             {
             return 0;
             }
-                int[] arr = new int[] {1, 2, 3, 4, 5 };
                 int sumevens = 0;
                 for (int i = 0; i < numbers.Length; i++)
                 {

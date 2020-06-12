@@ -9,7 +9,15 @@ namespace ChallengeSets
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
-           return !vals.All(x => x);
+            for (int i = 0; i < vals.Length; i++)
+            {
+                if (vals[i] == false)
+                {
+                    return true;
+                }
+            }
+            return false;
+           //return vals.All(x => x);
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)

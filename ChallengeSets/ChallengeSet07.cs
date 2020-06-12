@@ -7,12 +7,69 @@ namespace ChallengeSets
     {
         public int CountOfBusinessesWithNegativeNetProfit(List<Business> businesses)
         {
-            throw new NotImplementedException();
+            if (businesses.Count == 0)
+            {
+                return 0;
+            }
+            if (businesses == null)
+            {
+                return 0;
+            }
+            int count = 0;
+            
+
+
+            for (int i = 0; i < businesses.Count; i++)
+            {
+                Business business = businesses[i];
+                if (business.IsNotProfitable())
+                {
+                    count++;
+                }
+                if (business.TotalRevenue == null || business.TotalExpenses == null)
+                {
+                    return 0;
+                }
+               
+                // if the total revenue minus expenses is negative
+                //add one to the count.
+            }
+            return count;
         }
 
         public string GetCommaSeparatedListOfProfitableBusinesses(List<Business> businesses)
         {
-            throw new NotImplementedException();
+            string names = "";
+            int i = 0;
+
+            foreach(var business in businesses)
+            {
+                
+                if (business.IsProfitable())
+                {
+                    if (businesses.Count == 1)
+                    {
+                        names += business.Name.TrimEnd();
+                    }
+                    else if (i == businesses.Count - 1)
+                    {
+                        names += business.Name;
+                    }
+                    else
+                    {
+                        names += business.Name + ",";
+                    }
+                }
+                    i++;
+            }
+            //if the business is profitable
+            //add name to list
+
+
+            return names.Trim(','); 
+
+
+
         }
 
         public string GetNameOfHighestParentCompany(Business business)

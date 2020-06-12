@@ -20,7 +20,7 @@ namespace ChallengeSets
 
         public int GetSmallestNumber(int number1, int number2)
         {
-            if (number1<number2)
+            if (number1 < number2)
             {
                 return number1;
             }
@@ -38,14 +38,13 @@ namespace ChallengeSets
 
         public string GetGreeting(string nameOfPerson)
         {
-            if(nameOfPerson == "")
+            if (nameOfPerson == "")
             {
                 return "Hello!";
             }
             else
             {
-                var name = "Hello" + ", " + nameOfPerson + "!";
-                return name;
+                return "Hello, " + nameOfPerson + "!";
             }
             
         }
